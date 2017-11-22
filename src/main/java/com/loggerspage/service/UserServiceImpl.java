@@ -22,8 +22,10 @@ public class UserServiceImpl implements UserService {
 	public User createUser(CreateUserRequest request) throws ApplicationException {
 
 		UserEntity userEntity = new UserEntity();
-		userEntity.firstName = "can";
-		userEntity.lastName = "cobanoglu";
+		userEntity.firstName = request.firstName;
+		userEntity.lastName = request.lastName;
+		userEntity.userName = request.userName;
+		//...digerleri de eklenecek
 		userRepository.save(userEntity);
 
 		System.out.println(userRepository.count());

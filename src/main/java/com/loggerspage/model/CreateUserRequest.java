@@ -5,7 +5,17 @@ package com.loggerspage.model;
  */
 public class CreateUserRequest {
 
-  public String email;
+	public String firstName;
 
-  public String token;
+	public String lastName;
+
+	public String userName;
+
+	public String password;
+
+	public String email;
+
+	public String phone;
+
+	public String token;
 }
