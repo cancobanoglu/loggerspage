@@ -1,0 +1,7 @@
+package com.loggerspage.dao.domain;
+
+public enum Feeling {
+
+	OPEN, HAPPY, ALIVE, GOOD, LOVE, INTERESTED, POSITIVE, STRONG, ANGRY, DEPRESSED, CONFUSED, HELPLESS, INDIFFERENT, AFRAID, HURT, SAD
+
+}

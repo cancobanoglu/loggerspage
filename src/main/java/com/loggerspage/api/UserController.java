@@ -20,7 +20,7 @@ public class UserController extends AbstractController {
   @Autowired
   private UserService userService;
 
- @RequestMapping(method = RequestMethod.POST)
+ @RequestMapping(value = "/createUser",method = RequestMethod.POST)
   public ResponseEntity<User> createUser(@RequestBody CreateUserRequest request) throws ApplicationException {
     User newUser = userService.createUser(request);
     return successfulResponse(newUser);
