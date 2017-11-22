@@ -10,4 +10,5 @@ import com.loggerspage.model.User;
 public interface UserService {
 
   User createUser(CreateUserRequest request) throws ApplicationException;
+  
 }

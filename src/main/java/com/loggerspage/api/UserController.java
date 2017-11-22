@@ -14,15 +14,18 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Created by caniven on 18/11/2017.
  */
-@RestController(value = "users")
+@RestController(value = "/users")
 public class UserController extends AbstractController {
 
   @Autowired
   private UserService userService;
 
-  @RequestMapping(method = RequestMethod.POST)
+ @RequestMapping(method = RequestMethod.POST)
   public ResponseEntity<User> createUser(@RequestBody CreateUserRequest request) throws ApplicationException {
     User newUser = userService.createUser(request);
     return successfulResponse(newUser);
   }
+   
+  
+  
 }
