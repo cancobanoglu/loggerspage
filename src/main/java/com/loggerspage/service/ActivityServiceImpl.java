@@ -7,7 +7,7 @@ import com.loggerspage.ApplicationException;
 import com.loggerspage.dao.ActivityRepository;
 import com.loggerspage.dao.domain.ActivityEntity;
 import com.loggerspage.model.Activity;
-import com.loggerspage.model.AddActivityRequest;
+import com.loggerspage.model.CreateActivityRequest;
 
 
 @Service
@@ -17,7 +17,7 @@ public class ActivityServiceImpl implements ActivityService{
 	private ActivityRepository activityRepository;
 
 	@Override
-	public Activity addActivity(AddActivityRequest request) throws ApplicationException {
+	public Activity addActivity(CreateActivityRequest request) throws ApplicationException {
 	
 		ActivityEntity entity = new ActivityEntity();
 		entity.id = "1";

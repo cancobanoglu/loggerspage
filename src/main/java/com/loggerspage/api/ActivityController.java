@@ -2,7 +2,7 @@ package com.loggerspage.api;
 
 import com.loggerspage.ApplicationException;
 import com.loggerspage.model.Activity;
-import com.loggerspage.model.AddActivityRequest;
+import com.loggerspage.model.CreateActivityRequest;
 import com.loggerspage.service.ActivityService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +18,8 @@ public class ActivityController extends AbstractController {
 	@Autowired
 	private ActivityService activityService;
 
-	@RequestMapping(value = "/activity", method = RequestMethod.POST)
-	public ResponseEntity<Activity> createUser(@RequestBody AddActivityRequest request) throws ApplicationException {
+	@RequestMapping(value = "/createActivity", method = RequestMethod.POST)
+	public ResponseEntity<Activity> createUser(@RequestBody CreateActivityRequest request) throws ApplicationException {
 		Activity activity = activityService.addActivity(request);
 		return successfulResponse(activity);
 	}

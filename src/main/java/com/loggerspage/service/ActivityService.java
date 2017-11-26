@@ -2,9 +2,9 @@ package com.loggerspage.service;
 
 import com.loggerspage.ApplicationException;
 import com.loggerspage.model.Activity;
-import com.loggerspage.model.AddActivityRequest;
+import com.loggerspage.model.CreateActivityRequest;
 
 public interface ActivityService {
 
-	  Activity addActivity(AddActivityRequest request) throws ApplicationException;
+	  Activity addActivity(CreateActivityRequest request) throws ApplicationException;
 }

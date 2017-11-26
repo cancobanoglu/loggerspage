@@ -30,7 +30,7 @@ public class ActivityEntity {
 	
 	public Feeling feeling;
 	
-	public Value value;
+	public Worth worth;
 	
 	public boolean status;
 	

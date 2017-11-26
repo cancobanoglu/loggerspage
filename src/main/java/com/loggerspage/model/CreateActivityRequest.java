@@ -6,10 +6,8 @@ import com.loggerspage.dao.domain.Category;
 import com.loggerspage.dao.domain.Feeling;
 import com.loggerspage.dao.domain.Worth;
 
+public class CreateActivityRequest {
 
-public class Activity{
-	
-	public String id;
 	
 	public String title;
 	
@@ -23,8 +21,9 @@ public class Activity{
 	
 	public Feeling feeling;
 	
-	public Worth value;
+	public Worth worth;
 	
 	public boolean status;
-
+	
+	
 }
