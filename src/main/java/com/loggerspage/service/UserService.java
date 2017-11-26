@@ -18,6 +18,7 @@ public interface UserService {
   
   User findUserByEmail(String email)throws ApplicationException;
   
+  boolean deleteUser(String email)throws ApplicationException;
   
   
 }

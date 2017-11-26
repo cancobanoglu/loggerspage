@@ -57,6 +57,17 @@ public class UserController extends AbstractController {
 	 
  }
  
+ @RequestMapping(value = "/deleteUserProfile/{email}",method=RequestMethod.POST)
+ public ResponseEntity<User> deleteUser(@PathVariable String email) throws ApplicationException{
+	 
+	 if (userService.deleteUser(email)) {
+		 return successfulResponse(null);
+		
+	}
+	 
+	return badRequest(null);
+	 
+ }
  
  
  
