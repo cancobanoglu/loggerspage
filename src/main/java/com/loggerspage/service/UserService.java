@@ -1,6 +1,9 @@
 package com.loggerspage.service;
 
+import java.util.List;
+
 import com.loggerspage.ApplicationException;
+import com.loggerspage.dao.domain.UserEntity;
 import com.loggerspage.model.CreateUserRequest;
 import com.loggerspage.model.User;
 
@@ -10,5 +13,11 @@ import com.loggerspage.model.User;
 public interface UserService {
 
   User createUser(CreateUserRequest request) throws ApplicationException;
+  
+  User updateUser(User request) throws ApplicationException;
+  
+  User findUserByEmail(String email)throws ApplicationException;
+  
+  
   
 }

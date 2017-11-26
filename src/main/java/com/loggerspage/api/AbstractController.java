@@ -10,16 +10,25 @@ import org.springframework.http.ResponseEntity;
  */
 public class AbstractController {
 
-  protected <T> ResponseEntity successfulResponse(T body) {
-    return successfulResponse(body, 0);
-  }
+	protected <T> ResponseEntity successfulResponse(T body) {
+		return successfulResponse(body, 0);
+	}
 
-  protected <T> ResponseEntity successfulResponse(T body, int code) {
-    final ResponseMeta meta = new ResponseMeta().code(code).message("");
-    final Response response = new Response().meta(meta);
-    response.setResponse(body);
-    ResponseEntity responseEntity = new ResponseEntity(response, HttpStatus.OK);
-    return responseEntity;
-  }
+	protected <T> ResponseEntity successfulResponse(T body, int code) {
+		final ResponseMeta meta = new ResponseMeta().code(code).message("");
+		final Response response = new Response().meta(meta);
+		response.setResponse(body);
+		ResponseEntity responseEntity = new ResponseEntity(response, HttpStatus.OK);
+		return responseEntity;
+	}
 
+
+	protected <T> ResponseEntity badRequest(T body,int code) {
+		final ResponseMeta meta = new ResponseMeta().code(code).message("Bad Request");
+		final Response response = new Response().meta(meta);
+		return new ResponseEntity<>(response,HttpStatus.BAD_REQUEST);
+	}
+	protected <T> ResponseEntity badRequest(T body) {
+		return badRequest(body,400);
+	}
 }
