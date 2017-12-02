@@ -34,6 +34,10 @@ public class ActivityEntity {
 	
 	public boolean status;
 	
+	public Date start;
+	
+	public Date stop;
+	
 	
 	
 }

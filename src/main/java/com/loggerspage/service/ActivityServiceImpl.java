@@ -1,5 +1,8 @@
 package com.loggerspage.service;
 
+import java.util.Date;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -40,6 +43,11 @@ public class ActivityServiceImpl implements ActivityService{
 	}
 
 	@Override
+	public List<ActivityEntity> findByInterval(Date d1,Date d2){
+		return activityRepository.findActivityByInterval(d1, d2);
+	}
+	
+	@Override
 	public Activity deleteActivity(String id) throws ApplicationException {
 		// TODO Auto-generated method stub
 		return null;
@@ -62,8 +70,10 @@ public class ActivityServiceImpl implements ActivityService{
 		activity.id=entity.id;
 		activity.status=entity.status;
 		activity.title=entity.title;
-		activity.value=entity.worth;
+		activity.worth=entity.worth;
 		return activity;
 	}
+	
+	
 
 }
