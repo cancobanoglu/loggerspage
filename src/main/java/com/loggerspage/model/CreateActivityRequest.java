@@ -14,7 +14,7 @@ public class CreateActivityRequest {
 	public String description;
 	
 	public Date date;
-	
+		
 	public int duration;
 	
 	public Category category;

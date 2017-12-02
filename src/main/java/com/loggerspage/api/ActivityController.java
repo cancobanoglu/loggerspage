@@ -19,8 +19,8 @@ public class ActivityController extends AbstractController {
 	@Autowired
 	private ActivityService activityService;
 
-	@RequestMapping(value = "/createActivity", method = RequestMethod.POST)
-	public ResponseEntity<Activity> createUser(@RequestBody CreateActivityRequest request) throws ApplicationException {
+	@RequestMapping(method = RequestMethod.POST)
+	public ResponseEntity<Activity> createActiviy(@RequestBody CreateActivityRequest request) throws ApplicationException {
 		Activity activity = activityService.addActivity(request);
 		return successfulResponse(activity);
 	}

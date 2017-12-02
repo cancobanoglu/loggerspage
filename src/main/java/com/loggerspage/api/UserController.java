@@ -1,7 +1,6 @@
 package com.loggerspage.api;
 
 import com.loggerspage.ApplicationException;
-import com.loggerspage.dao.domain.UserEntity;
 import com.loggerspage.model.CreateUserRequest;
 import com.loggerspage.model.User;
 import com.loggerspage.service.UserService;

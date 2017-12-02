@@ -16,6 +16,6 @@ public interface ActivityRepository extends MongoRepository<ActivityEntity, Stri
 	@Query("{'category': ?0}")
 	public List<ActivityEntity> findActivityByCategory(Category category);
 	
-	public List<ActivityEntity> findActivityByInterval(Date start,Date stop);
+	//public List<ActivityEntity> findActivityByInterval(Date start,Date stop);
 
 }
