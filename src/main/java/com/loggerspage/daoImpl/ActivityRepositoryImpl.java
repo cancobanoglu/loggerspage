@@ -7,9 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import  org.springframework.data.mongodb.core.query.Query;
+import org.springframework.stereotype.Component;
+
 import com.loggerspage.dao.ActivityRepositoryCustom;
 import com.loggerspage.dao.domain.ActivityEntity;
 
+@Component
 public class ActivityRepositoryImpl implements ActivityRepositoryCustom{
 
 	@Autowired
@@ -23,5 +26,7 @@ public class ActivityRepositoryImpl implements ActivityRepositoryCustom{
 		activityEntities=mongoTemplate.find(q,ActivityEntity.class);
 		return activityEntities;
 	}
+
+
 
 }

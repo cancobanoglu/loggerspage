@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.loggerspage.ApplicationException;
 import com.loggerspage.dao.ActivityRepository;
 import com.loggerspage.dao.domain.ActivityEntity;
+import com.loggerspage.dao.domain.Category;
 import com.loggerspage.model.Activity;
 import com.loggerspage.model.CreateActivityRequest;
 
@@ -44,7 +45,9 @@ public class ActivityServiceImpl implements ActivityService{
 
 	@Override
 	public List<ActivityEntity> findByInterval(Date d1,Date d2){
-		return activityRepository.findActivityByInterval(d1, d2);
+		
+		List<ActivityEntity> myactiv=activityRepository.findActivityByInterval(d1, d2);
+		return myactiv;
 	}
 	
 	@Override
@@ -72,6 +75,12 @@ public class ActivityServiceImpl implements ActivityService{
 		activity.title=entity.title;
 		activity.worth=entity.worth;
 		return activity;
+	}
+
+	@Override
+	public List<ActivityEntity> findByActivityByCategoryName(Category category) throws ApplicationException {
+		return activityRepository.findActivityByCategory(category);
+		
 	}
 	
 	

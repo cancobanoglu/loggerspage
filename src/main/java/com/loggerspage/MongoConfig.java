@@ -11,6 +11,7 @@ import com.mongodb.MongoClient;
 import cz.jirutka.spring.embedmongo.EmbeddedMongoFactoryBean;
 
 @Configuration
+
 public class MongoConfig {
  
     private static final String MONGO_DB_URL = "localhost";
@@ -24,4 +25,5 @@ public class MongoConfig {
         MongoTemplate mongoTemplate = new MongoTemplate(mongoClient, MONGO_DB_NAME);
         return mongoTemplate;
     }
+    
 }

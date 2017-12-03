@@ -14,7 +14,7 @@ public interface ActivityRepository extends MongoRepository<ActivityEntity, Stri
 	
 	public List<ActivityEntity> findActivitByTitle(String title);
 	
-	@Query("{'category': ?0}")
+	@Query(value= "{'category': ?0}")
 	public List<ActivityEntity> findActivityByCategory(Category category);
 
 
