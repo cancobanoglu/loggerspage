@@ -51,14 +51,15 @@ public class ActivityServiceImpl implements ActivityService{
 	}
 	
 	@Override
-	public Activity deleteActivity(String id) throws ApplicationException {
-		// TODO Auto-generated method stub
-		return null;
+	public boolean deleteActivity(String id) throws ApplicationException {
+		
+		activityRepository.delete(activityRepository.findActivityById(id));
+		return true;
 	}
 
 	@Override
-	public Activity editActivity(CreateActivityRequest request) throws ApplicationException {
-		// TODO Auto-generated method stub
+	public Activity editActivity(String id) throws ApplicationException {
+		
 		return null;
 	}
 	
@@ -79,8 +80,8 @@ public class ActivityServiceImpl implements ActivityService{
 
 	@Override
 	public List<ActivityEntity> findByActivityByCategoryName(Category category) throws ApplicationException {
-		return activityRepository.findActivityByCategory(category);
 		
+		return activityRepository.findActivityByCategory(category);
 	}
 	
 	

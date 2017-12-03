@@ -13,9 +13,10 @@ public interface ActivityService {
 
 	  Activity addActivity(CreateActivityRequest request) throws ApplicationException;
 	  
-	  Activity deleteActivity(String id) throws ApplicationException;
+	  boolean deleteActivity(String id) throws ApplicationException;
 	  
-	  Activity editActivity(CreateActivityRequest request) throws ApplicationException;
+	  Activity editActivity(String id) throws ApplicationException;
+	  
 	  public List<ActivityEntity> findByInterval(Date fromDate,Date endDate)throws ApplicationException;
 	  
 	  public List<ActivityEntity> findByActivityByCategoryName(Category category)throws ApplicationException;

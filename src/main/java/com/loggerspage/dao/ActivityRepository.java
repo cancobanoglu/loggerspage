@@ -10,11 +10,13 @@ import org.springframework.stereotype.Repository;
 import com.loggerspage.dao.domain.ActivityEntity;
 import com.loggerspage.dao.domain.Category;
 
+
 public interface ActivityRepository extends MongoRepository<ActivityEntity, String>,ActivityRepositoryCustom{
 	
 	public List<ActivityEntity> findActivitByTitle(String title);
 	
-	@Query(value= "{'category': ?0}")
+	public ActivityEntity findActivityById(String id);
+	
 	public List<ActivityEntity> findActivityByCategory(Category category);
 
 
