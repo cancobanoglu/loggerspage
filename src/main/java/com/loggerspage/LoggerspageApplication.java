@@ -4,8 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @SpringBootApplication
+@EnableMongoRepositories("com.loggerspage.dao")
 public class LoggerspageApplication extends SpringBootServletInitializer {
 	
 
@@ -15,7 +17,8 @@ public class LoggerspageApplication extends SpringBootServletInitializer {
 		return builder.sources(LoggerspageApplication.class);
 	}
 
-	public static void main(String[] args) {
+	public static void main(
+			String[] args) {
 		SpringApplication.run(LoggerspageApplication.class, args);
 	}
 }

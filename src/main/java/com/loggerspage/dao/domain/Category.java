@@ -1,6 +1,13 @@
 package com.loggerspage.dao.domain;
 
-public enum Category {
+import java.io.Serializable;
 
-	WORK,READING,SPORT,HOMEWORK,FUN,SHOPPING,REST
+public enum Category  implements Serializable{
+
+	WORK,READING,SPORT,HOMEWORK,FUN,SHOPPING,REST;
+	
+
+    public String getCategory() {
+        return this.name();
+    }
 }

@@ -4,6 +4,8 @@ import java.util.Date;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
 
 @Document(collection="activity")
 public class ActivityEntity {
@@ -22,6 +24,7 @@ public class ActivityEntity {
 	
 	public String description;
 	
+	@DateTimeFormat(iso = ISO.DATE_TIME)
 	public Date date;
 	
 	public int duration;
@@ -33,6 +36,10 @@ public class ActivityEntity {
 	public Worth worth;
 	
 	public boolean status;
+	@DateTimeFormat(iso = ISO.DATE_TIME)
+	public Date start;
+	@DateTimeFormat(iso = ISO.DATE_TIME)
+	public Date stop;
 	
 	
 	

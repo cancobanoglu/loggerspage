@@ -23,7 +23,7 @@ public class Activity{
 	
 	public Feeling feeling;
 	
-	public Worth value;
+	public Worth worth;
 	
 	public boolean status;
 
