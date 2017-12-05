@@ -8,7 +8,7 @@ import com.loggerspage.dao.domain.Worth;
 
 
 public class Activity{
-	
+
 	public String id;
 	
 	public String title;
