@@ -4,19 +4,20 @@ package com.loggerspage.model;
  * Created by caniven on 18/11/2017.
  */
 public class User {
-	public String id;
 
-	public String firstName;
+  public String id;
 
-	public String lastName;
+  public String firstName;
 
-	public String userName;
+  public String lastName;
 
-	public String password;
+  public String userName;
 
-	public String email;
+  public String password;
 
-	public String phone;
+  public String email;
 
-	public String token;
+  public String phone;
+
+  public String token;
 }

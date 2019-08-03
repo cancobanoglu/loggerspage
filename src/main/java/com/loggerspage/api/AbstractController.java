@@ -21,5 +21,4 @@ public class AbstractController {
     ResponseEntity responseEntity = new ResponseEntity(response, HttpStatus.OK);
     return responseEntity;
   }
-
 }
